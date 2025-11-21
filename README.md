@@ -6,32 +6,41 @@ Esta é uma ferramenta de linha de comando (CLI) desenvolvida para auditar a pre
 
 ## **Funcionalidades:**
 Análise Rápida: Verifica alguns headers de segurança fundamentais;
+
 Feedback Visual: Usa cores (verde ✅ e vermelho ❌) para um feedback claro e imediato;
+
 Simulação de Navegador: Define um User-Agent para simular uma requisição de um usuário comum;
+
 Tratamento de Erros: Lida com falhas de conexão, timeouts e uso incorreto do comando.
 
 ## **Tecnologias Utilizadas:**
 Python;
+
 requests: Para realizar as requisições HTTP;
+
 colorama: Para adicionar cores ao output no terminal;
 
 ## **Como Usar:**
 ### **1. Pré-requisitos:**
 Python 3
+
 pip (geralmente incluído no Python)
 
 ### **2. Instalação**
 Clone este repositório (ou apenas salve o arquivo Check_headers.py) e instale as dependências:
+
 pip install requests colorama
 
 ### **4. Execução**
 Execute o script a partir do seu terminal, passando a URL do site que deseja verificar como argumento.
+
 python Check_headers.py <website_url>
 
 ### **Exemplos:**
 python Check_headers.py google.com
 
 python Check_headers.py https://github.com
+
 (O script adiciona https:// automaticamente se nenhum protocolo (http/https) for fornecido.)
 
 ### **Exemplo de Saída**
@@ -60,9 +69,15 @@ Cross-Origin-Opener-Policy ✅ 5/7
 A ferramenta verifica a presença dos seguintes headers:
 
 Strict-Transport-Security,
+
 Content-Security-Policy,
+
 X-Frame-Options,
+
 X-Content-Type-Options,
+
 Clear-Site-Data,
+
 Permissions-Policy,
+
 Cross-Origin-Opener-Policy
