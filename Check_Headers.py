@@ -50,7 +50,7 @@ except requests.exceptions.ConnectionError:
     print(f"{Fore.YELLOW}The connection to the website failed.")
     sys.exit()
 
-#Erro de timeout (A resposta do site excedeu o tempo limite)
+#Erro de timeout (resposta do site excedeu o tempo limite de 5s)
 except requests.exceptions.Timeout:
     print(f"{Fore.YELLOW}The website's response timed out.")
     sys.exit()
